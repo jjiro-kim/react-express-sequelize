@@ -2,11 +2,14 @@ import React from 'react';
 import ContactInfo from './ContactInfo';
 import ContactDetails from './ContactDetails';
 import ContactCreate from './ContactCreate';
+import Axios from 'axios';
 import update from 'react-addons-update';
 
 export default class Contact extends React.Component {
     constructor(props) {
         super(props);
+        Axios.get('http://localhost:3000/user').then( (response) => { console.log(response);} )
+
         this.state = {
             selectedKey: -1,
             keyword: '',
