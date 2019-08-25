@@ -15,16 +15,22 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-addons-update": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.12.10",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.0",
     "sequelize": "^5.13.1",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
-    "axios": "^0.19.0"
+    "webpack-dev-server": "^3.7.2"
   }
 }

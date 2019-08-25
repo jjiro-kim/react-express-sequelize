@@ -28,11 +28,23 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'                  // es6와 react를 일반 자바 형식으로 변경해줌
-            }
+            },
+            {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
+                loader: 'url-loader',
+                options: {
+                    publicPath: './',
+                    limit: 10000,
+                },
+            },
         ]
     },
 
-    // 
+    //
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
