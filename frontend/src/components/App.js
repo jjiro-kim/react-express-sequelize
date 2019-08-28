@@ -1,10 +1,10 @@
 import React from 'react';
-import Contact from './Contact';
+import Member from './Member/Member';
 
 class App extends React.Component {
   render(){
       return (
-        <Contact/>
+        <Member/>
       );
   }
 }

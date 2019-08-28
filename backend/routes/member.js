@@ -9,15 +9,41 @@ router.get('/', function(req, res) {
   });
 });
 
-router.get('/:id', function(req, res) {
-  Member.create({
-    ID: req.params.id,
-    NAME: req.params.id
-  })
+router.get('/:ID', function(req, res) {
+  Member.findOne({
+    where: {
+      ID: req.params.id
+    }
+  }).then(function(result){
+    res.json(result);
+  });
 });
 
 router.post('/', function(req, res) {
-  res.send('Received a POST request, param:' + req.params);
+  console.log(req);
+  Member.upsert({
+    ID: req.body.ID,
+    NAME: req.body.NAME
+  }).then(function(result) {
+    res.json(result);
+  });
+});
+
+router.put('/', function(req, res) {
+  Member.upsert({
+    ID: req.params.ID,
+    NAME: req.params.NAME
+  }).then(function(result) {
+    res.json(result);
+  });
+});
+
+router.delete('/', function(req, res) {
+  Member.destroy({
+    ID: req.params.ID
+  }).then(function(result) {
+    res.json(result);
+  });
 });
 
 module.exports = router;
